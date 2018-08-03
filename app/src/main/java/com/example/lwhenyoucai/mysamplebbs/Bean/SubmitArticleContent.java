@@ -4,7 +4,7 @@ package com.example.lwhenyoucai.mysamplebbs.Bean;
  * Created by Administrator on 2018/5/1.
  */
 
-public class SubmitPostContent {
+public class SubmitArticleContent {
 
     String postTitle;
     String moduleId;
@@ -13,7 +13,7 @@ public class SubmitPostContent {
     String postContent;
 
 
-    public SubmitPostContent(String postTitle, String moduleId, String moduleTitle, String userId, String postContent) {
+    public SubmitArticleContent(String postTitle, String moduleId, String moduleTitle, String userId, String postContent) {
         this.postTitle = postTitle;
         this.moduleId = moduleId;
         this.moduleTitle = moduleTitle;

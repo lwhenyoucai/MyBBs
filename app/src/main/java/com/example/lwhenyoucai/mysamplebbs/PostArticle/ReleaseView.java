@@ -1,4 +1,4 @@
-package com.example.lwhenyoucai.mysamplebbs.ReleasePost;
+package com.example.lwhenyoucai.mysamplebbs.PostArticle;
 
 import com.luck.picture.lib.entity.LocalMedia;
 

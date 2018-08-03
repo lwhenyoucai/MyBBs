@@ -3,7 +3,7 @@ package com.example.lwhenyoucai.mysamplebbs.Bean;
 /**
  * Created by lwhenyoucai on 2018/4/28.
  */
-public class PostContentData {
+public class ArticleContentData {
 
     String postContentId;
     String postContent;
@@ -11,7 +11,7 @@ public class PostContentData {
     String recordList;
     String videoList;
 
-    public PostContentData(String postContentId, String postContent, String imagList, String recordList, String videoList) {
+    public ArticleContentData(String postContentId, String postContent, String imagList, String recordList, String videoList) {
         this.postContentId = postContentId;
         this.postContent = postContent;
         this.imagList = imagList;

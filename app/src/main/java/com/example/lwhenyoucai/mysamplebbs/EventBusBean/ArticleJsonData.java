@@ -4,11 +4,11 @@ package com.example.lwhenyoucai.mysamplebbs.EventBusBean;
  * Created by Administrator on 2018/5/1.
  */
 
-public class PostJsonData {
+public class ArticleJsonData {
     private String key;
     private String jsonData;
 
-    public PostJsonData(String key, String jsonData) {
+    public ArticleJsonData(String key, String jsonData) {
         this.key = key;
         this.jsonData = jsonData;
     }

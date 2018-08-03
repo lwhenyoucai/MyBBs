@@ -3,7 +3,7 @@ package com.example.lwhenyoucai.mysamplebbs.Bean;
 /**
  * Created by lwhenyoucai on 2018/4/28.
  */
-public class MainPostData {
+public class MainArticleData {
 
     String postId;
     String postTitle;
@@ -13,7 +13,7 @@ public class MainPostData {
     String likeCount;
     String releaseTime;
 
-    public MainPostData(String postId, String postTitle, String userId, String moduleId, String browsCount, String likeCount, String releaseTime) {
+    public MainArticleData(String postId, String postTitle, String userId, String moduleId, String browsCount, String likeCount, String releaseTime) {
         this.postId = postId;
         this.postTitle = postTitle;
         this.userId = userId;
@@ -23,7 +23,7 @@ public class MainPostData {
         this.releaseTime = releaseTime;
     }
 
-    public MainPostData(String postId, String postTitle, String userId, String moduleId, String browsCount, String likeCount) {
+    public MainArticleData(String postId, String postTitle, String userId, String moduleId, String browsCount, String likeCount) {
         this.postId = postId;
         this.postTitle = postTitle;
         this.userId = userId;

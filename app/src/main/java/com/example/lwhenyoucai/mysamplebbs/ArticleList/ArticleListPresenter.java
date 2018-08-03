@@ -1,17 +1,17 @@
-package com.example.lwhenyoucai.mysamplebbs.PostList;
+package com.example.lwhenyoucai.mysamplebbs.ArticleList;
 
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.example.lwhenyoucai.mysamplebbs.EventBusBean.PostJsonData;
-import com.example.lwhenyoucai.mysamplebbs.Bean.MainPostData;
-import com.example.lwhenyoucai.mysamplebbs.Bean.PostContentData;
-import com.example.lwhenyoucai.mysamplebbs.Bean.PostModuleData;
+import com.example.lwhenyoucai.mysamplebbs.EventBusBean.ArticleJsonData;
+import com.example.lwhenyoucai.mysamplebbs.Bean.MainArticleData;
+import com.example.lwhenyoucai.mysamplebbs.Bean.ArticleContentData;
+import com.example.lwhenyoucai.mysamplebbs.Bean.ArticleModuleData;
 import com.example.lwhenyoucai.mysamplebbs.EventBusBean.ShowText;
 import com.example.lwhenyoucai.mysamplebbs.Bean.UserData;
-import com.example.lwhenyoucai.mysamplebbs.PostList.adapter.MainPostDataAdapter;
+import com.example.lwhenyoucai.mysamplebbs.ArticleList.adapter.MainArticleDataAdapter;
 import com.example.lwhenyoucai.mysamplebbs.Utils.ServerUrl;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -33,15 +33,15 @@ import java.util.Map;
 /**
  * Created by lwhenyoucai on 2018/4/28.
  */
-public class PostListPresenter {
+public class ArticleListPresenter {
     private Activity mActivity;
     private Gson gson;
-    private List<MainPostData> mainPostListAll;
-    private List<PostContentData> postContentList;
-    private List<PostModuleData> postModlueList;
+    private List<MainArticleData> mainPostListAll;
+    private List<ArticleContentData> postContentList;
+    private List<ArticleModuleData> postModlueList;
     private List<UserData> userList;
 
-    public PostListPresenter(Activity mActivity) {
+    public ArticleListPresenter(Activity mActivity) {
         this.mActivity = mActivity;
         gson = new Gson();
         mainPostListAll = new ArrayList<>();
@@ -49,7 +49,7 @@ public class PostListPresenter {
         postModlueList = new ArrayList<>();
         userList = new ArrayList<>();
     }
-    private PostListView postListView = new PostListView() {
+    private ArticleListView articleListView = new ArticleListView() {
         @Override
         public void getNewPostList() {
             AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
@@ -58,7 +58,7 @@ public class PostListPresenter {
                 public void onSuccess(int i, Header[] headers, byte[] bytes) {
                     String str = new String(bytes);
                     Log.e("data", str + "");
-                    EventBus.getDefault().post(new PostJsonData("getNewPostList",str));
+                    EventBus.getDefault().post(new ArticleJsonData("getNewPostList",str));
                 }
                 @Override
                 public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
@@ -80,17 +80,17 @@ public class PostListPresenter {
             JsonObject jsonObject = new JsonParser().parse(data).getAsJsonObject();
             JsonArray jsonArray = jsonObject.getAsJsonArray("postList");
             for (JsonElement element : jsonArray) {
-                MainPostData mainPostData = gson.fromJson(element, MainPostData.class);
-                mainPostListAll.add(mainPostData);
+                MainArticleData mainArticleData = gson.fromJson(element, MainArticleData.class);
+                mainPostListAll.add(mainArticleData);
             }
             JsonArray jsonArrayContent = jsonObject.getAsJsonArray("contentList");
             for (JsonElement element : jsonArrayContent) {
-                PostContentData contentData = gson.fromJson(element, PostContentData.class);
+                ArticleContentData contentData = gson.fromJson(element, ArticleContentData.class);
                 postContentList.add(contentData);
             }
             JsonArray jsonArrayModule = jsonObject.getAsJsonArray("moduleList");
             for (JsonElement element : jsonArrayModule) {
-                PostModuleData moduleData = gson.fromJson(element, PostModuleData.class);
+                ArticleModuleData moduleData = gson.fromJson(element, ArticleModuleData.class);
                 postModlueList.add(moduleData);
             }
             JsonArray jsonArrayUser = jsonObject.getAsJsonArray("userList");
@@ -158,7 +158,7 @@ public class PostListPresenter {
                 public void onSuccess(int i, Header[] headers, byte[] bytes) {
                     String str = new String(bytes);
                     Log.e("data", str + "");
-                    EventBus.getDefault().post(new PostJsonData("loadMore",str));
+                    EventBus.getDefault().post(new ArticleJsonData("loadMore",str));
                 }
                 @Override
                 public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
@@ -167,31 +167,31 @@ public class PostListPresenter {
             });
         }
     };
-    public void setOnItemClickListener(final MainPostDataAdapter mainPostDataAdapter){
-        mainPostDataAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+    public void setOnItemClickListener(final MainArticleDataAdapter mainArticleDataAdapter){
+        mainArticleDataAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 Log.e("pos", position + "");
-                MainPostData mainPostData = (MainPostData) adapter.getItem(position);
-                postListView.addBrowsCount(mainPostData.getPostId(), (Integer.parseInt(mainPostData.getBrowsCount()) + 1));
-                mainPostData.setBrowsCount(String.valueOf((Integer.parseInt(mainPostData.getBrowsCount()) + 1)));
-                mainPostDataAdapter.notifyDataSetChanged();
+                MainArticleData mainArticleData = (MainArticleData) adapter.getItem(position);
+                articleListView.addBrowsCount(mainArticleData.getPostId(), (Integer.parseInt(mainArticleData.getBrowsCount()) + 1));
+                mainArticleData.setBrowsCount(String.valueOf((Integer.parseInt(mainArticleData.getBrowsCount()) + 1)));
+                mainArticleDataAdapter.notifyDataSetChanged();
             }
         });
     }
 
     public void getNewPostList() {
-        postListView.getNewPostList();
+        articleListView.getNewPostList();
     }
 
     public void loadMore(int start,int count){
-        postListView.loadMore(start,count);
+        articleListView.loadMore(start,count);
     }
 
     public Map<String ,Object> setData(String jsonStr){
-        return postListView.setData(jsonStr);
+        return articleListView.setData(jsonStr);
     }
     public void addLikeCount(String postId,int likeCount){
-        postListView.addLikeCount(postId,likeCount);
+        articleListView.addLikeCount(postId,likeCount);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.lwhenyoucai.mysamplebbs.ReleasePost.adapter;
+package com.example.lwhenyoucai.mysamplebbs.PostArticle.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

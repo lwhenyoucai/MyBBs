@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import com.example.lwhenyoucai.mysamplebbs.PostList.PostListMain;
+import com.example.lwhenyoucai.mysamplebbs.ArticleList.ArticleListMain;
 import com.example.lwhenyoucai.mysamplebbs.R;
 import com.example.lwhenyoucai.mysamplebbs.Utils.SharedPreferencesHelp;
 /**
@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         initView();
         initEvent();
         if(sharedPreferencesHelp.getValue("LoginStatus").equals("1")){
-            Intent intent = new Intent(LoginActivity.this, PostListMain.class);
+            Intent intent = new Intent(LoginActivity.this, ArticleListMain.class);
             startActivityForResult(intent, 1);
             finish();
         }

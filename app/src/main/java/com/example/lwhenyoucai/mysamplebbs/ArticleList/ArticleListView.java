@@ -1,14 +1,11 @@
-package com.example.lwhenyoucai.mysamplebbs.PostList;
+package com.example.lwhenyoucai.mysamplebbs.ArticleList;
 
-import com.example.lwhenyoucai.mysamplebbs.Bean.MainPostData;
-
-import java.util.List;
 import java.util.Map;
 
 /**
  * Created by lwhenyoucai on 2018/4/28.
  */
-public interface PostListView {
+public interface ArticleListView {
     void getNewPostList();
     Map<String ,Object> setData(String data);
     void addBrowsCount(String postId,int browsCount);

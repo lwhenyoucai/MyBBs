@@ -4,13 +4,13 @@ package com.example.lwhenyoucai.mysamplebbs.Bean;
  * Created by Administrator on 2018/5/1.
  */
 
-public class PostModuleData {
+public class ArticleModuleData {
 
     String moduleId;
     String moduleTitle;
     String moduleDesc;
 
-    public PostModuleData(String moduleId, String moduleTitle, String moduleDesc) {
+    public ArticleModuleData(String moduleId, String moduleTitle, String moduleDesc) {
         this.moduleId = moduleId;
         this.moduleTitle = moduleTitle;
         this.moduleDesc = moduleDesc;

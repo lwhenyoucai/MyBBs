@@ -22,13 +22,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".PostList.PostListMain"
+        <activity android:name=".ArticleList.ArticleListMain"
             android:label="主界面">
 
         </activity>
 
         <activity android:name=".Login.LoginActivity"
-            android:label="登陆界面">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -38,7 +38,7 @@
             android:label="注册界面">
         </activity>
 
-        <activity android:name=".ReleasePost.ReleaseMain"
+        <activity android:name=".PostArticle.ReleaseMain"
             android:label="发布帖子"/>
 
         <activity android:name=".ChatUI.ui.activity.ChatMain"

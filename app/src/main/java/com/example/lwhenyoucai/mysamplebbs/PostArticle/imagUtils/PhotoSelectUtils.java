@@ -1,4 +1,4 @@
-package com.example.lwhenyoucai.mysamplebbs.ReleasePost.imagUtils;
+package com.example.lwhenyoucai.mysamplebbs.PostArticle.imagUtils;
 
 import android.app.Activity;
 

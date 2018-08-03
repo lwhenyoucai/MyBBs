@@ -1,4 +1,4 @@
-package com.example.lwhenyoucai.mysamplebbs.ReleasePost;
+package com.example.lwhenyoucai.mysamplebbs.PostArticle;
 
 import android.Manifest;
 import android.content.Intent;
@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 import com.allen.library.SuperTextView;
 import com.example.lwhenyoucai.mysamplebbs.R;
-import com.example.lwhenyoucai.mysamplebbs.ReleasePost.adapter.GridImageAdapter;
-import com.example.lwhenyoucai.mysamplebbs.ReleasePost.imagUtils.PhotoSelectUtils;
+import com.example.lwhenyoucai.mysamplebbs.PostArticle.adapter.GridImageAdapter;
+import com.example.lwhenyoucai.mysamplebbs.PostArticle.imagUtils.PhotoSelectUtils;
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.entity.LocalMedia;

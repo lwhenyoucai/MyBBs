@@ -1,10 +1,10 @@
-package com.example.lwhenyoucai.mysamplebbs.ReleasePost;
+package com.example.lwhenyoucai.mysamplebbs.PostArticle;
 
 import android.app.Activity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.lwhenyoucai.mysamplebbs.Bean.SubmitPostContent;
+import com.example.lwhenyoucai.mysamplebbs.Bean.SubmitArticleContent;
 import com.example.lwhenyoucai.mysamplebbs.Utils.ServerUrl;
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
@@ -37,8 +37,8 @@ public class ReleasePresenter {
             //String str = gson.toJson(imgList);
             //Log.e("strImg",str+"");
 
-            SubmitPostContent submitPostContent = new SubmitPostContent(postTitle,"1","模板标题","1",postContent);
-            String data = gson.toJson(submitPostContent);
+            SubmitArticleContent submitArticleContent = new SubmitArticleContent(postTitle,"1","模板标题","1",postContent);
+            String data = gson.toJson(submitArticleContent);
 
             AsyncHttpClient client = new AsyncHttpClient();
             RequestParams params = new RequestParams();

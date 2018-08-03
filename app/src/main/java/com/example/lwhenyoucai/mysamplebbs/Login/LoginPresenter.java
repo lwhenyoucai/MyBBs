@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 import com.example.lwhenyoucai.mysamplebbs.Bean.UserData;
-import com.example.lwhenyoucai.mysamplebbs.PostList.PostListMain;
+import com.example.lwhenyoucai.mysamplebbs.ArticleList.ArticleListMain;
 import com.example.lwhenyoucai.mysamplebbs.Utils.CookieUtils;
 import com.example.lwhenyoucai.mysamplebbs.Utils.FinalAsyncHttpClient;
 import com.example.lwhenyoucai.mysamplebbs.Utils.ServerUrl;
@@ -60,7 +60,7 @@ public class LoginPresenter {
                             if (loginStaus.getAsString().equals("1")) {
                                 //Log.e("onSuccess", str + "登陆成功");
                                 sharedPreferencesHelp.putValue("LoginStatus", "1");
-                                Intent intent = new Intent(mContext, PostListMain.class);
+                                Intent intent = new Intent(mContext, ArticleListMain.class);
                                 mContext.startActivity(intent);
                                 mContext.finish();
                             } else {

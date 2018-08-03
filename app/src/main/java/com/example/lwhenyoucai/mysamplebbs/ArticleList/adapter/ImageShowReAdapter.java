@@ -1,7 +1,6 @@
-package com.example.lwhenyoucai.mysamplebbs.PostList.adapter;
+package com.example.lwhenyoucai.mysamplebbs.ArticleList.adapter;
 
 import android.app.Activity;
-import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;

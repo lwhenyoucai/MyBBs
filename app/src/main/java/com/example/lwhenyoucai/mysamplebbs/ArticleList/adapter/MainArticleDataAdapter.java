@@ -1,9 +1,8 @@
-package com.example.lwhenyoucai.mysamplebbs.PostList.adapter;
+package com.example.lwhenyoucai.mysamplebbs.ArticleList.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,14 +12,13 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.example.lwhenyoucai.mysamplebbs.Bean.MainPostData;
-import com.example.lwhenyoucai.mysamplebbs.Bean.PostContentData;
-import com.example.lwhenyoucai.mysamplebbs.Bean.PostModuleData;
+import com.example.lwhenyoucai.mysamplebbs.Bean.MainArticleData;
+import com.example.lwhenyoucai.mysamplebbs.Bean.ArticleContentData;
+import com.example.lwhenyoucai.mysamplebbs.Bean.ArticleModuleData;
 import com.example.lwhenyoucai.mysamplebbs.Bean.UserData;
-import com.example.lwhenyoucai.mysamplebbs.PostList.PostListPresenter;
+import com.example.lwhenyoucai.mysamplebbs.ArticleList.ArticleListPresenter;
 import com.example.lwhenyoucai.mysamplebbs.R;
 import com.example.lwhenyoucai.mysamplebbs.Utils.AnalysisUtils;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,34 +27,34 @@ import java.util.Map;
 /**
  * Created by lwhenyoucai on 2018/4/28.
  */
-public class MainPostDataAdapter extends BaseQuickAdapter<MainPostData, BaseViewHolder> {
+public class MainArticleDataAdapter extends BaseQuickAdapter<MainArticleData, BaseViewHolder> {
     private Activity mActivity;
     private Map<String ,Object> map;
     //private Gson gson;
     private List<String> imgList;
-    private PostListPresenter postListPresenter;
+    private ArticleListPresenter articleListPresenter;
 
-    public MainPostDataAdapter(PostListPresenter postListPresenter,Map<String , Object> map, Activity mActivity) {
+    public MainArticleDataAdapter(ArticleListPresenter articleListPresenter, Map<String, Object> map, Activity mActivity) {
         super(R.layout.postlistmain_item);//, (List<MainPostData>) map.get("postList")
         this.mActivity = mActivity;
         this.map = map;
         //gson = new Gson();
         imgList = new ArrayList<>();
-        this.postListPresenter = postListPresenter;
+        this.articleListPresenter = articleListPresenter;
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, final MainPostData item) {
-        for (PostContentData postContentData : (List<PostContentData>)map.get("contentList")) {
-            if (postContentData.getPostContentId().equals(item.getPostId())) {
-                helper.setText(R.id.postList_content,postContentData.getPostContent()+"");
-                imgList = AnalysisUtils.analysisStringList(postContentData.getImagList());
+    protected void convert(BaseViewHolder helper, final MainArticleData item) {
+        for (ArticleContentData articleContentData : (List<ArticleContentData>)map.get("contentList")) {
+            if (articleContentData.getPostContentId().equals(item.getPostId())) {
+                helper.setText(R.id.postList_content, articleContentData.getPostContent()+"");
+                imgList = AnalysisUtils.analysisStringList(articleContentData.getImagList());
             }
         }
-        for(PostModuleData postModuleData:(List<PostModuleData>)map.get("moduleList")){
-            if(postModuleData.getModuleId().equals(item.getModuleId())){
+        for(ArticleModuleData articleModuleData :(List<ArticleModuleData>)map.get("moduleList")){
+            if(articleModuleData.getModuleId().equals(item.getModuleId())){
                 helper.setText(R.id.postList_title, item.getPostTitle() + "");
-                helper.setText(R.id.postmodule,"  #"+postModuleData.getModuleTitle());
+                helper.setText(R.id.postmodule,"  #"+ articleModuleData.getModuleTitle());
             }
         }
         for(UserData userData: (List<UserData>)map.get("userList")){
@@ -96,7 +94,7 @@ public class MainPostDataAdapter extends BaseQuickAdapter<MainPostData, BaseView
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                postListPresenter.addLikeCount(item.getPostId(), (Integer.parseInt(item.getLikeCount()) + 1));
+                articleListPresenter.addLikeCount(item.getPostId(), (Integer.parseInt(item.getLikeCount()) + 1));
                 item.setLikeCount(String.valueOf(Integer.parseInt(item.getLikeCount()) + 1));
                 notifyDataSetChanged();
             }
