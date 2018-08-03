@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="columnTextColor">#ff7c7c7c</color>
+    <color name="colorPrimary">#33a7e4</color>
+    <color name="colorPrimaryDark">#33a7e4</color>
+    <!--<color name="colorPrimary">#80CA4A</color>-->
+    <!--<color name="colorPrimaryDark">#80CA4A</color>-->
+    <color name="colorAccent">#4acdf9</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- 其它背景色或分割线相关 -->
+    <color name="bg_content">#f3f3f3</color>
+    <color name="divider_line">#d9d9d9</color>
+
+    <!-- 字体色 -->
+    <color name="text_title">#1b1b1b</color>
+    <color name="text_content">#818181</color>
+    <color name="text_sub">#919191</color>
+    <color name="text_hint">#c7c7c7</color>
+    <color name="text_black">#404040</color>
+
+    <!--透明色-->
+    <color name="trans">#00000000</color>
+    <!--背景色-->
+    <!--<color name="app_backgroundColor">#F3F6F8</color>-->
+    <color name="app_backgroundColor">#F0EFF5</color>
+    <!-- 常用字体颜色 -->
+    <color name="word_black">#343434</color>
+    <color name="word_blackGray">#666666</color>
+    <color name="word_gray">#999999</color>
+    <color name="word_red">#F9413C</color>
+    <!--添加的青蓝色-->
+    <color name="word_add">#14DDD4</color>
+    <!--编辑的蓝色-->
+    <color name="word_edit">#13AFF1</color>
+    <color name="word_green">#02D056</color>
+    <color name="word_yellow">#ECFA09</color>
+    <!--未选中的灰色-->
+    <color name="word_item_nRight_grey">#CCCCCC</color>
+    <!--选中的灰色-->
+    <color name="word_item_right_gray">#A2A2A2</color>
+    <!-- title的灰色-->
+    <color name="word_item_left_gray">#676767</color>
+
+
+    <!-- 描边颜色 -->
+    <color name="border_clo">#4acdf9</color>
+    <color name="text_clo">#333</color>
+    <color name="blue">#419DE4</color>
+
+    <color name="tablayout_blue">#33a7e4</color>
+    <color name="tablayout_black">#333333</color>
+
+
+    <!-- 侧滑菜单 -->
+    <color name="delete_red">#FF3B31</color>
+    <color name="edit_gray">#C7C7CD</color>
+    <color name="darkgrey_clo">#a9a9a9</color>
+    <!--暗灰色 -->
+
+
+    <!-- 提示条目信息的背景色 米黄色-->
+    <color name="dialog_background_orange">#FFF8E1</color>
+    <!-- 提示条目信息的文字 橙色-->
+    <color name="dialog_text_orange">#F4C218</color>
+
+    <!--下划线的颜色-->
+    <color name="line">#D4D4D4</color>
+
+    <!--新手引导浮层-->
+    <!--<color name="shadow">#524d49</color>-->
+
+    <!-- 筛选标签被选中的颜色-->
+    <color name="item_blue">#D6E9FF</color>
+
+    <!-- 底部按键的颜色-->
+    <color name="by_click_blue">#33a7e4</color>
+    <color name="by_click_gray">#BDC7D1</color>
+
+    <!--柱形图颜色-->
+    <color name="bar_orange">#FFC002</color>
+
+    <!--透明的白色-->
+    <color name="trans_white">#33ffffff</color>
+
+    <!--第二层的item背景色-->
+    <color name="tier_white">#F7F7F7</color>
+
+
+    <!--表格颜色-->
+    <color name="chart1">#8085fd</color>
+    <color name="chart2">#4cb8e9</color>
+    <color name="chart3">#4fbb99</color>
+    <color name="chart4">#eb5a57</color>
+    <color name="chart5">#fdc244</color>
+    <color name="chart6">#fdd856</color>
+</resources>

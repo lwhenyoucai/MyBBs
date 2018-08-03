@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        applicationId "com.example.lwhenyoucai.mysamplebbs"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+//    compile 'com.android.support:support-v4:23.4.0'
+    compile files('libs/android-async-http-1.4.7.jar')
+    compile files('libs/httpclient-4.1.2.jar')
+    compile files('libs/httpcore-4.0.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.5'//图片选择
+    compile 'com.github.lygttpod:SuperTextView:2.1.2'//文本
+    //compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.5'//图片选择
+    compile 'com.makeramen:roundedimageview:2.3.0'//圆形、圆角图
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-4' //下拉刷新
+    compile 'com.lai.weavey:loadinglayout:1.3.1'//加载中、无网络、无数据、出错四种情况
+    compile 'com.nineoldandroids:library:2.4.0' //shapLoading中的ViewHelp
+
+    compile 'com.jude:easyrecyclerview:4.2.3'
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    compile 'org.fusesource.mqtt-client:mqtt-client:1.12'
+
+}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- supertext 的长宽-->
+    <style name="item_wh">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+    <!-- 没有图标和底部边线  顶部条目-->
+    <style name="item_superText_ATop">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="sLeftTextColor">@color/mediumBlack</item>
+        <item name="sRightTextColor">@color/grey</item>
+        <item name="sDividerLineType">none</item>
+        <item name="sRightTextSize">14sp</item>
+        <item name="sRightIconHeight">17dp</item>
+        <item name="sRightIconWidth">17dp</item>
+        <item name="sRightIconRes">@drawable/ic_arrow_tint</item>
+    </style>
+    <!-- 没有图标和底部边线、返回箭头  顶部条目-->
+    <style name="item_superText_Top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="sLeftTextColor">@color/mediumBlack</item>
+        <item name="sRightTextColor">@color/grey</item>
+        <item name="sDividerLineType">none</item>
+        <item name="sRightTextSize">14sp</item>
+
+    </style>
+    <!-- 没有图标和返回箭头的 中间条目-->
+    <style name="item_superText_center">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sLeftTextColor">@color/mediumBlack</item>
+        <item name="sRightTextColor">@color/grey</item>
+        <item name="sBottomDividerLineMarginLR">10dp</item>
+        <item name="sRightTextSize">14sp</item>
+    </style>
+
+    <!-- 没有图标 中间条目-->
+    <style name="item_superText_ACenter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sLeftTextColor">@color/mediumBlack</item>
+        <item name="sRightTextColor">@color/grey</item>
+        <item name="sBottomDividerLineMarginLR">10dp</item>
+        <item name="sRightIconHeight">17dp</item>
+        <item name="sRightIconWidth">17dp</item>
+        <item name="sRightIconRes">@drawable/ic_arrow_tint</item>
+    </style>
+    <!-- 没有图标 底部条目-->
+    <style name="item_superText_ABottom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sLeftTextColor">@color/mediumBlack</item>
+        <item name="sRightTextColor">@color/grey</item>
+        <item name="sDividerLineType">none</item>
+        <item name="sRightIconHeight">17dp</item>
+        <item name="sRightIconWidth">17dp</item>
+        <item name="sRightIconRes">@drawable/ic_arrow_tint</item>
+    </style>
+
+
+    <!-- 含有图标和返回箭头的 顶部选项条目-->
+    <style name="item_superText_IATop">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="sLeftIconWidth">35dp</item>
+        <item name="sLeftIconHeight">35dp</item>
+        <item name="sRightIconHeight">17dp</item>
+        <item name="sRightIconWidth">17dp</item>
+        <item name="sRightIconRes">@drawable/ic_arrow_tint</item>
+        <item name="sLeftTextColor">@color/mediumBlack</item>
+        <item name="sBottomDividerLineMarginLR">10dp</item>
+    </style>
+
+    <!-- 含有图标和返回箭头的 中间条目-->
+    <style name="item_superText_IACenter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sLeftIconWidth">35dp</item>
+        <item name="sLeftIconHeight">35dp</item>
+        <item name="sRightIconHeight">17dp</item>
+        <item name="sRightIconWidth">17dp</item>
+        <item name="sRightIconRes">@drawable/ic_arrow_tint</item>
+        <item name="sLeftTextColor">@color/mediumBlack</item>
+        <item name="sBottomDividerLineMarginLR">10dp</item>
+    </style>
+
+    <!-- 含有图标和返回箭头的 底部条目-->
+    <style name="item_superText_IABottom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sLeftIconWidth">35dp</item>
+        <item name="sLeftIconHeight">35dp</item>
+        <item name="sRightIconHeight">17dp</item>
+        <item name="sRightIconWidth">17dp</item>
+        <item name="sRightIconRes">@drawable/ic_arrow_tint</item>
+        <item name="sLeftTextColor">@color/mediumBlack</item>
+        <item name="sDividerLineType">none</item>
+    </style>
+
+    <!-- 顶部输入框外层的LinearLayout-->
+    <style name="item_editLinear_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- 中间输入框外层的LinearLayout-->
+    <style name="item_editLinear_center">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="item_editText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:textColorHint">@color/word_item_nRight_grey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/word_black</item>
+    </style>
+
+    <style name="item_editText_remark">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">top</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:textColorHint">@color/darkgrey</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 带有返回箭头、没有图标的item外层布局-->
+    <style name="item_relativeLayout_A">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/px88dp</item>
+        <item name="android:background">@drawable/bg_itemwhite_selected</item>
+    </style>
+    <!-- 带有返回箭头、没有图标的item文本-->
+    <style name="item_relativeText_A">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/px20dp</item>
+        <item name="android:textColor">@color/word_black</item>
+        <item name="android:textSize">@dimen/px32sp</item>
+    </style>
+    <!-- 带有返回箭头、没有图标的item返回箭头-->
+    <style name="item_relativeArrow_A">
+        <item name="android:layout_width">@dimen/px30dp</item>
+        <item name="android:layout_height">@dimen/px30dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/px20dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/ic_arrow_tint</item>
+    </style>
+
+
+
+</resources>

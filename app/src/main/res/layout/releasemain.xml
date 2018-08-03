@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/postTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="标题"
+            style="@style/item_superText_ATop"
+            android:background="@color/white"/>
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/moduleSelect"
+            style="@style/item_superText_ATop"
+            app:sLeftTextString="内容类型选择" />
+
+        <EditText
+            android:id="@+id/postContentEdit"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:scrollbars="vertical"
+            android:textColorHint="@color/word_item_nRight_grey"
+            android:textSize="16sp"
+            android:hint="帖子内容(最多输入300字符)"
+            />
+        <!--统计输入的字符-->
+        <TextView
+            android:id="@+id/contentCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="right"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            android:text="200/200"
+            android:textColor="@color/word_item_nRight_grey" />
+        <!--拍照-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/contentImag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+<Button
+    android:id="@+id/release_bt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="发布"/>
+</LinearLayout>

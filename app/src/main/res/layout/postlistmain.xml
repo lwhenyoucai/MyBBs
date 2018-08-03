@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_backgroundColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/chatUI_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="聊天界面" />
+
+        <Button
+            android:id="@+id/exitSys_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="退出登录" />
+
+        <Button
+            android:id="@+id/releasePost_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发布帖子" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.weavey.loading.lib.LoadingLayout
+                android:id="@+id/loading_Post"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:isFirstVisible="false">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/msg_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </com.weavey.loading.lib.LoadingLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+</LinearLayout>
